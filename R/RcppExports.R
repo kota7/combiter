@@ -5,3 +5,7 @@ NextPerm <- function(x) {
     .Call('combIter_NextPerm', PACKAGE = 'combIter', x)
 }
 
+PrevPerm <- function(x) {
+    .Call('combIter_PrevPerm', PACKAGE = 'combIter', x)
+}
+
