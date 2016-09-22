@@ -10,10 +10,12 @@ std::vector<int> NextPerm(std::vector<int> x) {
   //   x   : integer vector
   //
   // Returns:
-  //   integer vector
+  //   integer vector, same size as x
   //
   // Assumes:
   //   x has duplicate values
+  // Note:
+  //   if x has reached the 'end', the value does not change
 
   // Starting from the end of the vector x,
   // find the first decreasing adjacent values.
@@ -60,10 +62,12 @@ std::vector<int> PrevPerm(std::vector<int> x) {
   //   x   : integer vector
   //
   // Returns:
-  //   integer vector
+  //   integer vector, same size as x
   //
   // Assumes:
   //   x has duplicate values
+  // Note:
+  //   If x has reached the 'end', then no change is made
 
   // Same algorithm as NextPerm, except for the direction of inequality
   for (int i = x.size()-1; i > 0; i--)

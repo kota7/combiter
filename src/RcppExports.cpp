@@ -5,6 +5,30 @@
 
 using namespace Rcpp;
 
+// NextComb
+std::vector<int> NextComb(std::vector<int> x, int n);
+RcppExport SEXP combIter_NextComb(SEXP xSEXP, SEXP nSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::vector<int> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< int >::type n(nSEXP);
+    rcpp_result_gen = Rcpp::wrap(NextComb(x, n));
+    return rcpp_result_gen;
+END_RCPP
+}
+// PrevComb
+std::vector<int> PrevComb(std::vector<int> x, int n);
+RcppExport SEXP combIter_PrevComb(SEXP xSEXP, SEXP nSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::vector<int> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< int >::type n(nSEXP);
+    rcpp_result_gen = Rcpp::wrap(PrevComb(x, n));
+    return rcpp_result_gen;
+END_RCPP
+}
 // NextPerm
 std::vector<int> NextPerm(std::vector<int> x);
 RcppExport SEXP combIter_NextPerm(SEXP xSEXP) {
