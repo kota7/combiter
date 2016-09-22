@@ -1,5 +1,6 @@
 #include <Rcpp.h>
 #include <vector>
+#include "comb.h"
 
 // [[Rcpp::export]]
 std::vector<int> NextComb(std::vector<int> x, int n)
@@ -15,6 +16,7 @@ std::vector<int> NextComb(std::vector<int> x, int n)
   //
   // Assumes:
   //   x is sorted, positive and has no duplicate values
+  //   size of x is positive and does not exceed n
   // Note:
   //   If x has reached the 'end', then no change is made
 
@@ -73,6 +75,8 @@ std::vector<int> PrevComb(std::vector<int> x, int n)
   //
   // Assumes:
   //   x is sorted, positive and has no duplicate values
+  //   size of x is positive and does not exceed n
+
   // Note:
   //   If x has reached the 'end', then no change is made
 

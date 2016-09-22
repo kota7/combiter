@@ -17,3 +17,11 @@ PrevPerm <- function(x) {
     .Call('combIter_PrevPerm', PACKAGE = 'combIter', x)
 }
 
+NextSubset <- function(x, n) {
+    .Call('combIter_NextSubset', PACKAGE = 'combIter', x, n)
+}
+
+PrevSubset <- function(x, n) {
+    .Call('combIter_PrevSubset', PACKAGE = 'combIter', x, n)
+}
+

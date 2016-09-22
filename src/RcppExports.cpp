@@ -51,3 +51,27 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// NextSubset
+std::vector<int> NextSubset(std::vector<int> x, int n);
+RcppExport SEXP combIter_NextSubset(SEXP xSEXP, SEXP nSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::vector<int> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< int >::type n(nSEXP);
+    rcpp_result_gen = Rcpp::wrap(NextSubset(x, n));
+    return rcpp_result_gen;
+END_RCPP
+}
+// PrevSubset
+std::vector<int> PrevSubset(std::vector<int> x, int n);
+RcppExport SEXP combIter_PrevSubset(SEXP xSEXP, SEXP nSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::vector<int> >::type x(xSEXP);
+    Rcpp::traits::input_parameter< int >::type n(nSEXP);
+    rcpp_result_gen = Rcpp::wrap(PrevSubset(x, n));
+    return rcpp_result_gen;
+END_RCPP
+}

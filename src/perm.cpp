@@ -4,7 +4,7 @@
 
 // [[Rcpp::export]]
 std::vector<int> NextPerm(std::vector<int> x) {
-  // Computes the next permutation to x
+  // Compute the next permutation to x
   //
   // Args:
   //   x   : integer vector
@@ -13,7 +13,8 @@ std::vector<int> NextPerm(std::vector<int> x) {
   //   integer vector, same size as x
   //
   // Assumes:
-  //   x has duplicate values
+  //   x has no duplicate values
+  //   size of x is positive
   // Note:
   //   if x has reached the 'end', the value does not change
 
@@ -56,7 +57,7 @@ std::vector<int> NextPerm(std::vector<int> x) {
 
 // [[Rcpp::export]]
 std::vector<int> PrevPerm(std::vector<int> x) {
-  // Computes the previous permutation to x
+  // Compute the previous permutation to x
   //
   // Args:
   //   x   : integer vector
@@ -65,7 +66,8 @@ std::vector<int> PrevPerm(std::vector<int> x) {
   //   integer vector, same size as x
   //
   // Assumes:
-  //   x has duplicate values
+  //   x has no duplicate values
+  //   size of x is positive
   // Note:
   //   If x has reached the 'end', then no change is made
 
