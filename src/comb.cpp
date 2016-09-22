@@ -22,10 +22,15 @@ std::vector<int> NextComb(std::vector<int> x, int n)
 
   int k = x.size();
 
+  // A bit of input validation
+  if (k == 0) Rcpp::stop("x must have positive size");
+  if (k > n) Rcpp::stop("size of x must not exceed n");
+
   // If the first element is k-1, then there is no more next
   // just return x as is
   if (x[0] >= n-k+1) return x;
 
+  // Strategy:
   // Increase the last element by one.
   // Notice that i-th entry can be at most (n-k+i+1), since
   // there are k-i-1 elements, larger than it; Otherwise,
@@ -82,10 +87,15 @@ std::vector<int> PrevComb(std::vector<int> x, int n)
 
   int k = x.size();
 
+  // A bit of input validation
+  if (k == 0) Rcpp::stop("x must have positive size");
+  if (k > n) Rcpp::stop("size of x must not exceed n");
+
   // If the last element is k, then there is no more previous
   // just return x as is
   if (x[k-1] <= k) return x;
 
+  // Strategy:
   // Decrease the last element by one.
   // For i-th entry, where i > 0, each value must be greater than
   // the (i-1)-th entry due to the sorted property.

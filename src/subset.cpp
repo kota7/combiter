@@ -32,6 +32,9 @@ std::vector<int> NextSubset(std::vector<int> x, int n)
 
   int k = x.size();
 
+  // Quick validation
+  if (k > n) Rcpp::stop("size of x must not exceed n");
+
   if (k == 0) {
     std::vector<int> out(1, 1);
     return out;
@@ -76,6 +79,9 @@ std::vector<int> PrevSubset(std::vector<int> x, int n)
   // Otherwise, return PrevComb
 
   int k = x.size();
+
+  // Quick validation
+  if (k > n) Rcpp::stop("size of x must not exceed n");
 
   if (k == 0) return x;
 

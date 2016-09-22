@@ -18,6 +18,10 @@ std::vector<int> NextPerm(std::vector<int> x) {
   // Note:
   //   if x has reached the 'end', the value does not change
 
+  // Quick input validation
+  if (x.size() == 0) Rcpp::stop("x must have positive size");
+
+  // Strategy:
   // Starting from the end of the vector x,
   // find the first decreasing adjacent values.
   // If find one, then swap that samller value with the
@@ -70,6 +74,9 @@ std::vector<int> PrevPerm(std::vector<int> x) {
   //   size of x is positive
   // Note:
   //   If x has reached the 'end', then no change is made
+
+  // Quick input validation
+  if (x.size() == 0) Rcpp::stop("x must have positive size");
 
   // Same algorithm as NextPerm, except for the direction of inequality
   for (int i = x.size()-1; i > 0; i--)
