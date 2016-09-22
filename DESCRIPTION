@@ -1,0 +1,17 @@
+Package: combIter
+Type: Package
+Title: Combinatrics Iterators
+Version: 0.1.0
+Authors@R: c(
+  person("Kota", "Mori", email = "kmori05@gmail.com", role = c("aut", "cre"))
+  )
+Maintainer: Kota Mori <kmori05@gmail.com>
+Description: Provide iterators for combinations, permutations, and subsets.
+License: MIT + file LICENSE
+Depends:
+    R (>= 3.1)
+LazyData: TRUE
+LinkingTo: Rcpp
+Imports:
+    Rcpp
+RoxygenNote: 5.0.1
