@@ -15,7 +15,7 @@ hasPrev(obj, ...)
 Logical value indicating whether the iterator has a previous element.
 }
 \description{
-\code{hasNPrev} is a generic function that indicates if the
+\code{hasPrev} is a generic function that indicates if the
 iterator has another element backward.
 }
 

@@ -17,4 +17,14 @@ iterator object
 \description{
 Create an iterator for all combinations k integers out of 1 through n.
 }
+\examples{
+x <- icomb(5, 3)
+ct <- 0
+while (hasNext(x))
+{
+  ct <- ct + 1
+  i <- nextElem(x)
+  cat(sprintf("\%3d : \%s\\n", ct, paste0(i, collapse = " ")))
+}
+}
 

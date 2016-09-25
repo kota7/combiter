@@ -29,7 +29,7 @@ prevElem <- function(obj, ...)
 }
 
 #' Does This Iterator Have A Previous Element
-#' @description \code{hasNPrev} is a generic function that indicates if the
+#' @description \code{hasPrev} is a generic function that indicates if the
 #' iterator has another element backward.
 #' @param obj an iterator object
 #' @param ... additional arguments

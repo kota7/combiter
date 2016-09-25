@@ -6,6 +6,15 @@
 #' @param n positive integer
 #' @return iterator object
 #' @export
+#' @examples
+#' x <- iperm(3)
+#' ct <- 0
+#' while (hasNext(x))
+#' {
+#'   ct <- ct + 1
+#'   i <- nextElem(x)
+#'   cat(sprintf("%3d : %s\n", ct, paste0(i, collapse = " ")))
+#' }
 iperm <- function(n)
 {
   stopifnot(length(n) == 1L)
@@ -24,6 +33,15 @@ iperm <- function(n)
 #' @param k positive integer no greater than n
 #' @return iterator object
 #' @export
+#' @examples
+#' x <- icomb(5, 3)
+#' ct <- 0
+#' while (hasNext(x))
+#' {
+#'   ct <- ct + 1
+#'   i <- nextElem(x)
+#'   cat(sprintf("%3d : %s\n", ct, paste0(i, collapse = " ")))
+#' }
 icomb <- function(n, k)
 {
   stopifnot(length(n) == 1L)
@@ -50,6 +68,15 @@ icomb <- function(n, k)
 #' @param n positive integer
 #' @return iterator object
 #' @export
+#' @examples
+#' x <- isubset(3)
+#' ct <- 0
+#' while (hasNext(x))
+#' {
+#'   ct <- ct + 1
+#'   i <- nextElem(x)
+#'   cat(sprintf("%3d : %s\n", ct, paste0(i, collapse = " ")))
+#' }
 isubset <- function(n)
 {
   stopifnot(length(n) == 1L)
