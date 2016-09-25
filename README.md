@@ -2,8 +2,8 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 [![Build Status](https://travis-ci.org/kota7/combiter.svg?branch=master)](https://travis-ci.org/kota7/combiter)
 
-combiter: Combinatrics Iterators for R
-======================================
+combiter: Combinatorics Iterators for R
+=======================================
 
 This package provides iterators for combinations, permutations, and subsets, which allow you to go through all elements without creating a huge set of all possible values.
 
@@ -31,7 +31,7 @@ This package provides three classes of iterator objects: `iperm`, `icomb`, and `
 -   `icomb(n, k)` goes through all combinations of `k` integers out of 1 to `n`.
 -   `isubset(n)` goes through all subsets of integers 1 to `n`.
 
-The iterators do not store all possible values inside the object. Instead, they compute the next or previous element on spot. This implementation would be more memory efficient with a large `n`, since the number of possible cases grows exponentially or faster for these combinatrics operations.
+The iterators do not store all possible values inside the object. Instead, they compute the next or previous element on spot. This implementation would be more memory efficient with a large `n`, since the number of possible cases grows exponentially or even faster for these Combinatorics operations.
 
 Examples
 --------
