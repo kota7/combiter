@@ -22,10 +22,10 @@ Use by
 library(combiter)
 ```
 
-Iterators
----------
+Overview
+--------
 
-This package provides three iterator objects: `iperm`, `icomb`, and `isubset`.
+This package provides three classes of iterator objects: `iperm`, `icomb`, and `isubset`.
 
 -   `iperm(n)` goes through all permutation of integers 1 to `n`.
 -   `icomb(n, k)` goes through all combinations of `k` integers out of 1 to `n`.
