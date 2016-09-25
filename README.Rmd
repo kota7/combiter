@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 [![Build Status](https://travis-ci.org/kota7/combiter.svg?branch=master)](https://travis-ci.org/kota7/combiter)
 
 
-# combiter: Combinatrics Iterators for R
+# combiter: Combinatorics Iterators for R
 
 This package provides iterators for combinations, permutations, and subsets,
 which allow you to go through all elements without creating a huge set of
@@ -54,7 +54,7 @@ The iterators do not store all possible values inside the object.
 Instead, they compute the next or previous element on spot.
 This implementation would be more memory efficient with a large `n`, 
 since the number of possible cases grows exponentially or even faster for these
-combinatrics operations.
+Combinatorics operations.
 
 ## Examples
 

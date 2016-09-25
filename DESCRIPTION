@@ -1,13 +1,13 @@
 Package: combiter
 Type: Package
-Title: Combinatrics Iterators
+Title: Combinatorics Iterators
 Version: 0.1.0
 Authors@R: c(
   person("Kota", "Mori", email = "kmori05@gmail.com", role = c("aut", "cre"))
   )
 Maintainer: Kota Mori <kmori05@gmail.com>
 Description:
-    This package provides iterators for combinations, permutations, and subsets,
+    Provides iterators for combinations, permutations, and subsets,
     which allow one to go through all elements without creating a huge set of
     all possible values.
 License: MIT + file LICENSE
