@@ -18,6 +18,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
+[![Build Status](https://travis-ci.org/kota7/combiter.svg?branch=master)](https://travis-ci.org/kota7/combiter)
+
+
 # combiter: Combinatrics Iterators for R
 
 This package provides iterators for combinations, permutations, and subsets,
