@@ -24,3 +24,5 @@ Suggests:
     combinat,
     fastmatch,
     testthat
+URL: https://github.com/kota7/combiter
+BugReports: https://github.com/kota7/combiter/issues
