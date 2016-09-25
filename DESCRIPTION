@@ -8,7 +8,7 @@ Authors@R: c(
 Maintainer: Kota Mori <kmori05@gmail.com>
 Description:
     This package provides iterators for combinations, permutations, and subsets,
-    which allow you to go through all elements without creating a huge set of
+    which allow one to go through all elements without creating a huge set of
     all possible values.
 License: MIT + file LICENSE
 Depends:
