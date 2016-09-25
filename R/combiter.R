@@ -1,4 +1,4 @@
-#' @useDynLib combIter
+#' @useDynLib combiter
 #' @importFrom Rcpp sourceCpp
 NULL
 

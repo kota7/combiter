@@ -1,4 +1,4 @@
 library(testthat)
-library(combIter)
+library(combiter)
 
-test_check("combIter")
+test_check("combiter")

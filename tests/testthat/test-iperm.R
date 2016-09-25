@@ -1,5 +1,5 @@
 library(testthat)
-library(combIter)
+library(combiter)
 library(fastmatch)
 context("permutation iterator")
 

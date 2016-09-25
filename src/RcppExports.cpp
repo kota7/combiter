@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // NextComb
 std::vector<int> NextComb(std::vector<int> x, int n);
-RcppExport SEXP combIter_NextComb(SEXP xSEXP, SEXP nSEXP) {
+RcppExport SEXP combiter_NextComb(SEXP xSEXP, SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -19,7 +19,7 @@ END_RCPP
 }
 // PrevComb
 std::vector<int> PrevComb(std::vector<int> x, int n);
-RcppExport SEXP combIter_PrevComb(SEXP xSEXP, SEXP nSEXP) {
+RcppExport SEXP combiter_PrevComb(SEXP xSEXP, SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -31,7 +31,7 @@ END_RCPP
 }
 // NextPerm
 std::vector<int> NextPerm(std::vector<int> x);
-RcppExport SEXP combIter_NextPerm(SEXP xSEXP) {
+RcppExport SEXP combiter_NextPerm(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -42,7 +42,7 @@ END_RCPP
 }
 // PrevPerm
 std::vector<int> PrevPerm(std::vector<int> x);
-RcppExport SEXP combIter_PrevPerm(SEXP xSEXP) {
+RcppExport SEXP combiter_PrevPerm(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -53,7 +53,7 @@ END_RCPP
 }
 // NextSubset
 std::vector<int> NextSubset(std::vector<int> x, int n);
-RcppExport SEXP combIter_NextSubset(SEXP xSEXP, SEXP nSEXP) {
+RcppExport SEXP combiter_NextSubset(SEXP xSEXP, SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -65,7 +65,7 @@ END_RCPP
 }
 // PrevSubset
 std::vector<int> PrevSubset(std::vector<int> x, int n);
-RcppExport SEXP combIter_PrevSubset(SEXP xSEXP, SEXP nSEXP) {
+RcppExport SEXP combiter_PrevSubset(SEXP xSEXP, SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;

@@ -2,26 +2,26 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 NextComb <- function(x, n) {
-    .Call('combIter_NextComb', PACKAGE = 'combIter', x, n)
+    .Call('combiter_NextComb', PACKAGE = 'combiter', x, n)
 }
 
 PrevComb <- function(x, n) {
-    .Call('combIter_PrevComb', PACKAGE = 'combIter', x, n)
+    .Call('combiter_PrevComb', PACKAGE = 'combiter', x, n)
 }
 
 NextPerm <- function(x) {
-    .Call('combIter_NextPerm', PACKAGE = 'combIter', x)
+    .Call('combiter_NextPerm', PACKAGE = 'combiter', x)
 }
 
 PrevPerm <- function(x) {
-    .Call('combIter_PrevPerm', PACKAGE = 'combIter', x)
+    .Call('combiter_PrevPerm', PACKAGE = 'combiter', x)
 }
 
 NextSubset <- function(x, n) {
-    .Call('combIter_NextSubset', PACKAGE = 'combIter', x, n)
+    .Call('combiter_NextSubset', PACKAGE = 'combiter', x, n)
 }
 
 PrevSubset <- function(x, n) {
-    .Call('combIter_PrevSubset', PACKAGE = 'combIter', x, n)
+    .Call('combiter_PrevSubset', PACKAGE = 'combiter', x, n)
 }
 
