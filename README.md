@@ -10,7 +10,13 @@ This package provides iterators for combinations, permutations, and subsets, whi
 Installation and import
 -----------------------
 
-Install by
+Install from CRAN by:
+
+``` r
+install.packages("combiter")
+```
+
+Or install development version by:
 
 ``` r
 devtools::install_github("kota7/combiter")

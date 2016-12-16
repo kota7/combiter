@@ -31,8 +31,12 @@ all possible values.
 
 ## Installation and import
 
-Install by
+Install from CRAN by:
+```{r, eval=FALSE}
+install.packages("combiter")
+```
 
+Or install development version by:
 ```{r, eval=FALSE}
 devtools::install_github("kota7/combiter")
 ```
