@@ -33,11 +33,11 @@ Overview
 
 This package provides three classes of iterator objects: `iperm`, `icomb`, and `isubset`.
 
--   `iperm(n)` goes through all permutation of integers 1 to `n`.
--   `icomb(n, k)` goes through all combinations of `k` integers out of 1 to `n`.
--   `isubset(n)` goes through all subsets of integers 1 to `n`.
+-   `iperm(n)` goes through all permutation of integers 1 to n.
+-   `icomb(n, k)` goes through all combinations of k integers out of 1 to n.
+-   `isubset(n)` goes through all subsets of integers 1 to n.
 
-The iterators do not store all possible values inside the object. Instead, they compute the next or previous element on spot. This implementation would be more memory efficient with a large `n`, since the number of possible cases grows exponentially or even faster for these Combinatorics operations.
+The iterators do not store all possible values inside the object. Instead, they compute the next or previous element on spot. This implementation would be more memory efficient with a large n, since the number of possible cases grows exponentially or even faster for these Combinatorics operations.
 
 Examples
 --------
