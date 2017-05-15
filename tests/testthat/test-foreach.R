@@ -1,6 +1,8 @@
 library(testthat)
 library(combiter)
 library(fastmatch)
+library(foreach)
+
 context("use with foreach")
 
 test_that("foreach and as.list", {
