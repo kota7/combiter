@@ -23,6 +23,7 @@ RoxygenNote: 6.0.1
 Suggests:
     combinat,
     fastmatch,
+    foreach,
     testthat
 URL: https://github.com/kota7/combiter
 BugReports: https://github.com/kota7/combiter/issues
