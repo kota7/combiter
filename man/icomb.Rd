@@ -27,4 +27,3 @@ while (hasNext(x))
   cat(sprintf("\%3d : \%s\\n", ct, paste0(i, collapse = " ")))
 }
 }
-

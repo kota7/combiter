@@ -21,7 +21,11 @@ iperm <- function(n)
   stopifnot(n > 0L)
   stopifnot((n %% 1) == 0)
 
-  obj <- combinatiter(NextPerm, PrevPerm, 1:n, n:1)
+  obj <- incrementaliter(nextFunc = function(i, n) NextPerm(i),
+                         prevFunc = function(i, n) PrevPerm(i),
+                         firstFunc = function(n) 1:n ,
+                         lastFunc = function(n) n:1 ,
+                         n = n)
   class(obj) <- c("iperm", class(obj))
   obj
 }
@@ -54,9 +58,11 @@ icomb <- function(n, k)
   stopifnot(k <= n)
 
 
-  obj <- combinatiter(nextFunc = NextComb, prevFunc = PrevComb,
-                     first = 1:k, last = (n-k+1):n,
-                     n = n)
+  obj <- incrementaliter(nextFunc = function(i,n,k) NextComb(i, n),
+                         prevFunc = function(i,n,k) PrevComb(i, n),
+                         firstFunc = function(n,k) 1:k,
+                         lastFunc = function(n,k) (n-k+1):n,
+                         n = n, k = k)
   class(obj) <- c("icomb", class(obj))
   obj
 }
@@ -83,9 +89,11 @@ isubset <- function(n)
   stopifnot(n > 0L)
   stopifnot((n %% 1) == 0)
 
-  obj <- combinatiter(nextFunc = NextSubset, prevFunc = PrevSubset,
-                     first = integer(0), last = 1:n,
-                     n = n)
+  obj <- incrementaliter(nextFunc = function(i, n) NextSubset(i, n),
+                         prevFunc = function(i, n) PrevSubset(i, n),
+                         firstFunc = function(n) integer(0),
+                         lastFunc = function(n) 1:n,
+                         n = n)
   class(obj) <- c("isubset", class(obj))
   obj
 }
