@@ -4,10 +4,12 @@
 \alias{iperm}
 \title{Permutation Iterator}
 \usage{
-iperm(n)
+iperm(n, k = n)
 }
 \arguments{
 \item{n}{positive integer}
+
+\item{k}{positive integer}
 }
 \value{
 iterator object

@@ -54,24 +54,26 @@ BEGIN_RCPP
 END_RCPP
 }
 // NextPerm
-std::vector<int> NextPerm(std::vector<int> x);
-RcppExport SEXP combiter_NextPerm(SEXP xSEXP) {
+std::vector<int> NextPerm(std::vector<int> x, int n);
+RcppExport SEXP combiter_NextPerm(SEXP xSEXP, SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< std::vector<int> >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(NextPerm(x));
+    Rcpp::traits::input_parameter< int >::type n(nSEXP);
+    rcpp_result_gen = Rcpp::wrap(NextPerm(x, n));
     return rcpp_result_gen;
 END_RCPP
 }
 // PrevPerm
-std::vector<int> PrevPerm(std::vector<int> x);
-RcppExport SEXP combiter_PrevPerm(SEXP xSEXP) {
+std::vector<int> PrevPerm(std::vector<int> x, int n);
+RcppExport SEXP combiter_PrevPerm(SEXP xSEXP, SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< std::vector<int> >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(PrevPerm(x));
+    Rcpp::traits::input_parameter< int >::type n(nSEXP);
+    rcpp_result_gen = Rcpp::wrap(PrevPerm(x, n));
     return rcpp_result_gen;
 END_RCPP
 }

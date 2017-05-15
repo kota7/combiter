@@ -17,12 +17,12 @@ PrevComb <- function(x, n) {
     .Call('combiter_PrevComb', PACKAGE = 'combiter', x, n)
 }
 
-NextPerm <- function(x) {
-    .Call('combiter_NextPerm', PACKAGE = 'combiter', x)
+NextPerm <- function(x, n) {
+    .Call('combiter_NextPerm', PACKAGE = 'combiter', x, n)
 }
 
-PrevPerm <- function(x) {
-    .Call('combiter_PrevPerm', PACKAGE = 'combiter', x)
+PrevPerm <- function(x, n) {
+    .Call('combiter_PrevPerm', PACKAGE = 'combiter', x, n)
 }
 
 NextSubset <- function(x, n) {
