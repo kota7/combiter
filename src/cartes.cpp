@@ -24,7 +24,7 @@ std::vector<int> NextCartes(std::vector<int> x, std::vector<int> nvec)
   // check if this is the last value
   // i.e. x == nvec for all
   bool is_end = true;
-  for (int i=0; i < x.size(); i++)
+  for (size_t i=0; i < x.size(); i++)
   {
     if (x[i] < nvec[i]) {
       is_end = false;
@@ -59,7 +59,7 @@ std::vector<int> PrevCartes(std::vector<int> x, std::vector<int> nvec)
   // check if this is the first value
   // i.e. x == 1 for all
   bool is_first = true;
-  for (int i=0; i < x.size(); i++)
+  for (size_t i=0; i < x.size(); i++)
   {
     if (x[i] > 1) {
       is_first = false;

@@ -1,62 +1,64 @@
 library(testthat)
 library(combiter)
 library(fastmatch)
+
 context("cartesean product iterator")
 
 test_that("icartes goes through product of maxes", {
 
-  x <- iperm(3)
-  while (hasNext(x))
-  {
-    nvec <- nextElem(x)
-    y <- icartes(nvec)
-    ct <- 0
-    while (hasNext(y))
-    {
-      ct <- ct + 1
-      nextElem(y)
-    }
-    expect_equal(ct, prod(nvec))
-
-    # backward
-    y <- icartes(nvec)
-    ct <- 0
-    while (hasPrev(y))
-    {
-      ct <- ct + 1
-      prevElem(y)
-    }
-    expect_equal(ct, prod(nvec))
-  }
-})
-
-
-test_that("icomb covers all combinations", {
-  for (n in 1:5)
-  {
-    for (k in 1:n)
-    {
-      x <- icomb(n, k)
-      allCombs <- combinat::combn(n, k, simplify = FALSE)
-      while (hasNext(x))
+  for (n1 in 1:3) {
+    for (n2 in 1:3) {
+      for (n3 in 1:3)
       {
-        i <- nextElem(x)
-        expect_false(is.na(fmatch(list(i), allCombs)))
-      }
+        nvec <- c(n1,n2,n3)
+        x <- icartes(nvec)
+        ct <- 0
+        while (hasNext(x))
+        {
+          ct <- ct + 1
+          nextElem(x)
+        }
+        expect_equal(ct, prod(nvec))
 
-      # do the same for backward
-      x <- icomb(n, k)
-      while (hasPrev(x))
-      {
-        i <- prevElem(x)
-        expect_false(is.na(fmatch(list(i), allCombs)))
+        # backward
+        x <- icartes(nvec)
+        ct <- 0
+        while (hasPrev(x))
+        {
+          ct <- ct + 1
+          prevElem(x)
+        }
+        expect_equal(ct, prod(nvec))
       }
     }
   }
 })
 
 
-test_that("icomb elements are ordered lexicographically", {
+test_that("icartes covers all cartesean product", {
+
+  for (n1 in 1:3) {
+    for (n2 in 1:3) {
+      for (n3 in 1:3)
+      {
+        all_elems <- expand.grid(1:n1, 1:n2, 1:n3)
+        all_elems <- lapply(1:nrow(all_elems), function(i) {
+          as.integer(all_elems[i, ]) })
+        nvec <- c(n1,n2,n3)
+        x <- icartes(nvec)
+        while (hasNext(x))
+        {
+          i <- nextElem(x)
+          expect_false(is.na(fmatch(list(i), all_elems)))
+        }
+
+      }
+    }
+  }
+})
+
+
+test_that("icartes elements are ordered lexicographically", {
   lexico_smaller <- function(a, b)
   {
     # check if a < b lexicograpically
@@ -66,51 +68,43 @@ test_that("icomb elements are ordered lexicographically", {
     return(a[min(index)] < b[min(index)])
   }
 
-  for (n in 1:5)
-  {
-    for (k in 1:n)
-    {
-      x <- icomb(n, k)
-      i <- NULL
-      while (hasNext(x))
+  for (n1 in 1:3) {
+    for (n2 in 1:3) {
+      for (n3 in 1:3)
       {
-        j <- nextElem(x)
-        # requires i < j, but check only when i is not NULL
-        if (!is.null(i)) {
-          expect_true(lexico_smaller(i, j))
+        nvec <- c(n1,n2,n3)
+        x <- icartes(nvec)
+        i <- NULL
+        while (hasNext(x))
+        {
+          j <- nextElem(x)
+          if (!is.null(i)) expect_true(lexico_smaller(i, j))
+          i <- j
         }
-        i <- j
-      }
 
-      # backward
-      x <- icomb(n, k)
-      i <- NULL
-      while (hasPrev(x))
-      {
-        j <- prevElem(x)
-        # requires j < i
-        if (!is.null(i)) {
-          expect_true(lexico_smaller(j, i))
+        # backward
+        x <- icartes(nvec)
+        i <- NULL
+        while (hasPrev(x))
+        {
+          j <- prevElem(x)
+          if (!is.null(i)) expect_true(lexico_smaller(j, i))
+          i <- j
         }
-        i <- j
       }
     }
   }
 })
 
 
-test_that("icomb rejects invalid elements", {
-  expect_error(icomb(0, 3))
-  expect_error(icomb(-3, 3))
-  expect_error(icomb(1:2, 3))
-  expect_error(icomb(1.5, 3))
-  expect_error(icomb(3.0000000001, 3))
-
-  expect_error(icomb(10, 0))
-  expect_error(icomb(10, -5))
-  expect_error(icomb(10, 1:2))
-  expect_error(icomb(10, 1.5))
-  expect_error(icomb(10, 3.000000001))
+test_that("icartes rejects invalid elements", {
+  expect_error(icartes(0))
+  expect_error(icartes(c(-1, 3)))
+  expect_error(icartes(c(4, -1, 3)))
+  expect_error(icartes())
+  expect_error(icartes(c(1.5, 1:10)))
+  expect_error(icartes(3.0000000001))
+  expect_error(icartes(c(4, 5, 1.2)))
 })
 
 

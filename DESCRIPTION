@@ -6,8 +6,7 @@ Authors@R: c(
   person("Kota", "Mori", email = "kmori05@gmail.com", role = c("aut", "cre"))
   )
 Maintainer: Kota Mori <kmori05@gmail.com>
-Description:
-    Provides iterators for combinations, permutations, and subsets,
+Description: Provides iterators for combinations, permutations, and subsets,
     which allow one to go through all elements without creating a huge set of
     all possible values.
 License: MIT + file LICENSE
@@ -19,7 +18,7 @@ Imports:
     iterators,
     itertools,
     Rcpp
-RoxygenNote: 6.0.1
+RoxygenNote: 5.0.1
 Suggests:
     combinat,
     fastmatch,

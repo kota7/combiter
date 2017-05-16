@@ -18,3 +18,4 @@ iterator value
 \code{prevElem} is a generic funcion to move an
 iterator object one step backward.
 }
+
