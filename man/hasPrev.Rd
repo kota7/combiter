@@ -18,4 +18,3 @@ Logical value indicating whether the iterator has a previous element.
 \code{hasPrev} is a generic function that indicates if the
 iterator has another element backward.
 }
-

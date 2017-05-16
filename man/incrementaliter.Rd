@@ -21,4 +21,3 @@ and returns the first or last values of the iteration}
 \description{
 Factory of Iterators with Incremental Operations
 }
-

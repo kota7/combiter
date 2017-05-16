@@ -38,4 +38,3 @@ while (hasNext(x))
 
 as.list(isubsetv(letters[1:4]))
 }
-

@@ -1,4 +1,4 @@
-#' @useDynLib combiter, .registration = TRUE
+#' @useDynLib combiter
 #' @importFrom Rcpp sourceCpp
 NULL
 

@@ -18,4 +18,3 @@ iterator value, format dependes on the objects
 \code{getFirst} is a generic function that returns the
 last value of iterators
 }
-
