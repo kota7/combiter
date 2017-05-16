@@ -4,7 +4,7 @@ library(fastmatch)
 context("permutation iterator")
 
 test_that("iperm goes through n P k values", {
-  for (n in 1:5)
+  for (n in 1:4)
   {
     for (k in 1:n)
     {
@@ -33,7 +33,7 @@ test_that("iperm goes through n P k values", {
 
 
 test_that("iperm covers all permutations", {
-  for (n in 1:5)
+  for (n in 1:4)
   {
     for (k in 1:n)
     {
@@ -68,7 +68,7 @@ test_that("iperm elements are ordered lexicographically", {
     return(a[min(index)] < b[min(index)])
   }
 
-  for (n in 1:5)
+  for (n in 1:4)
   {
     for (k in 1:n)
     {

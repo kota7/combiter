@@ -28,3 +28,37 @@ icartes <- function(nvec)
   class(obj) <- c("icartes", class(obj))
   obj
 }
+
+
+
+#' @export
+#' @rdname icartes
+#' @param ... set of iterables (subsettable by \code{[})
+#' @details \itemize{
+#' \item{\code{icartes} iterates through all combinations of integers}
+#' \item{\code{icartesv} iterates through all combinations of general values}
+#' }
+#' @examples
+#'
+#' x <- icartesv(Month=c("Jan", "Feb", "Mar"),
+#'               Loc=c("NY", "LA"),
+#'               By=c("car", "plane", "bus"))
+#' as.list(x)
+icartesv <- function(...)
+{
+  value_set <- list(...)
+  nvec <- unlist(lapply(value_set, length))
+  obj <- icartes(nvec)
+  nextElem <- function() Map(`[`, value_set, obj$nextElem())
+  prevElem <- function() Map(`[`, value_set, obj$prevElem())
+  hasNext  <- function() obj$hasNext()
+  hasPrev  <- function() obj$hasPrev()
+  getFirst <- function() Map(`[`, value_set, obj$getFirst())
+  getLast  <- function() Map(`[`, value_set, obj$getLast())
+
+  out <- list(nextElem=nextElem, prevElem=prevElem,
+              hasNext=hasNext, hasPrev=hasPrev,
+              getFirst=getFirst, getLast=getLast)
+  class(out) <- c("isubsetv", "incrementaliter", "abstractiter", "iter")
+  out
+}

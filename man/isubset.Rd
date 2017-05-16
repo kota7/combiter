@@ -2,18 +2,29 @@
 % Please edit documentation in R/isubset.R
 \name{isubset}
 \alias{isubset}
+\alias{isubsetv}
 \title{Subset Iterator}
 \usage{
 isubset(n)
+
+isubsetv(values)
 }
 \arguments{
 \item{n}{positive integer}
+
+\item{values}{iterable (subsettable by \code{[})}
 }
 \value{
 iterator object
 }
 \description{
 Create an iterator for all subsets of integers 1 through n.
+}
+\details{
+\itemize{
+\item{\code{isubset} iterates through integer vectors}
+\item{\code{isubsetv} iterates through general values}
+}
 }
 \examples{
 x <- isubset(3)
@@ -24,5 +35,7 @@ while (hasNext(x))
   i <- nextElem(x)
   cat(sprintf("\%3d : \%s\\n", ct, paste0(i, collapse = " ")))
 }
+
+as.list(isubsetv(letters[1:4]))
 }
 

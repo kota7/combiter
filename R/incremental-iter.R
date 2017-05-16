@@ -39,11 +39,15 @@ incrementaliter <- function(nextFunc, prevFunc, firstFunc, lastFunc, ...)
     return(i)
   }
 
+  getFirst <- function() firstFunc(...)
+  getLast  <- function() lastFunc(...)
+
   #self <- environment()
   #class(self) <- "combinatiter"
   #return(self)
   out <- list(nextElem=nextElem, prevElem=prevElem,
-              hasNext=hasNext, hasPrev=hasPrev)
+              hasNext=hasNext, hasPrev=hasPrev,
+              getFirst=getFirst, getLast=getLast)
   class(out) <- c("incrementaliter", "abstractiter", "iter")
   out
 }
@@ -63,3 +67,8 @@ hasNext.incrementaliter <- function(obj, ...) { obj$hasNext() }
 #' @export
 hasPrev.incrementaliter <- function(obj, ...) { obj$hasPrev() }
 
+#' @export
+getFirst.incrementaliter <- function(obj, ...) { obj$getFirst() }
+
+#' @export
+getLast.incrementaliter <- function(obj, ...) { obj$getLast() }

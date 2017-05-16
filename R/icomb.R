@@ -36,3 +36,32 @@ icomb <- function(n, k)
   obj
 }
 
+
+
+#' @export
+#' @rdname icomb
+#' @param values iterable (subsettable by \code{[})
+#' @details \itemize{
+#' \item{\code{icomb} iterates through integer vectors}
+#' \item{\code{icombv} iterates through general values}
+#' }
+#' @examples
+#'
+#' as.list(icombv(c("A", "G", "C"), 2))
+icombv <- function(values, k)
+{
+  n <- length(values)
+  obj <- icomb(n,k)
+  nextElem <- function() values[obj$nextElem()]
+  prevElem <- function() values[obj$prevElem()]
+  hasNext  <- function() obj$hasNext()
+  hasPrev  <- function() obj$hasPrev()
+  getFirst <- function() values[obj$getFirst()]
+  getLast  <- function() values[obj$getLast()]
+
+  out <- list(nextElem=nextElem, prevElem=prevElem,
+              hasNext=hasNext, hasPrev=hasPrev,
+              getFirst=getFirst, getLast=getLast)
+  class(out) <- c("icombv", "incrementaliter", "abstractiter", "iter")
+  out
+}

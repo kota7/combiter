@@ -29,3 +29,31 @@ isubset <- function(n)
 }
 
 
+#' @export
+#' @rdname isubset
+#' @param values iterable (subsettable by \code{[})
+#' @details \itemize{
+#' \item{\code{isubset} iterates through integer vectors}
+#' \item{\code{isubsetv} iterates through general values}
+#' }
+#' @examples
+#'
+#' as.list(isubsetv(letters[1:4]))
+isubsetv <- function(values)
+{
+  n <- length(values)
+  obj <- isubset(n)
+  nextElem <- function() values[obj$nextElem()]
+  prevElem <- function() values[obj$prevElem()]
+  hasNext  <- function() obj$hasNext()
+  hasPrev  <- function() obj$hasPrev()
+  getFirst <- function() values[obj$getFirst()]
+  getLast  <- function() values[obj$getLast()]
+
+  out <- list(nextElem=nextElem, prevElem=prevElem,
+              hasNext=hasNext, hasPrev=hasPrev,
+              getFirst=getFirst, getLast=getLast)
+  class(out) <- c("isubsetv", "incrementaliter", "abstractiter", "iter")
+  out
+}
+

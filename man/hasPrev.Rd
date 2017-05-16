@@ -7,7 +7,7 @@
 hasPrev(obj, ...)
 }
 \arguments{
-\item{obj}{an iterator object}
+\item{obj}{an R object}
 
 \item{...}{additional arguments}
 }
