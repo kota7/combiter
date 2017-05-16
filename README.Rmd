@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [![Build Status](https://travis-ci.org/kota7/combiter.svg?branch=master)](https://travis-ci.org/kota7/combiter)
 [![CRAN Status](http://www.r-pkg.org/badges/version/combiter)](http://www.r-pkg.org/badges/version/combiter)
-
+[![](http://cranlogs.r-pkg.org/badges/combiter)](http://cran.rstudio.com/web/packages/combiter/index.html)
 
 # combiter: Combinatorics Iterators for R
 
