@@ -3,7 +3,7 @@
 \name{icartes}
 \alias{icartes}
 \alias{icartesv}
-\title{Cartesean Product Iterator}
+\title{Cartesian Product Iterator}
 \usage{
 icartes(nvec)
 
@@ -18,7 +18,7 @@ icartesv(...)
 iterator object
 }
 \description{
-Cartesean Product Iterator
+Cartesian Product Iterator
 }
 \details{
 \itemize{

@@ -1,4 +1,4 @@
-#' Cartesean Product Iterator
+#' Cartesian Product Iterator
 #'
 #' @param nvec integer vector of number of items
 #' @return iterator object
