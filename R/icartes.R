@@ -1,5 +1,6 @@
 #' Cartesian Product Iterator
 #'
+#' Create an iterator going through Cartesian product of several items.
 #' @param nvec integer vector of number of items
 #' @return iterator object
 #' @export

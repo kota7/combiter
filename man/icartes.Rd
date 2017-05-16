@@ -18,7 +18,7 @@ icartesv(...)
 iterator object
 }
 \description{
-Cartesian Product Iterator
+Create an iterator going through Cartesian product of several items.
 }
 \details{
 \itemize{
