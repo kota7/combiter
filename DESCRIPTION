@@ -1,7 +1,7 @@
 Package: combiter
 Type: Package
 Title: Combinatorics Iterators
-Version: 0.1.0
+Version: 1.0.1
 Authors@R: c(
   person("Kota", "Mori", email = "kmori05@gmail.com", role = c("aut", "cre"))
   )
