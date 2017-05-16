@@ -23,6 +23,8 @@ icomb <- function(n, k)
   stopifnot(k > 0L)
   stopifnot((k %% 1) == 0)
   stopifnot(k <= n)
+  n <- as.integer(n)
+  k <- as.integer(k)
 
 
   obj <- incrementaliter(nextFunc = function(i,n,k) NextComb(i, n),

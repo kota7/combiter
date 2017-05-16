@@ -18,6 +18,7 @@ icartes <- function(nvec)
   stopifnot(length(nvec) > 0)
   stopifnot(all(nvec >= 1))
   stopifnot(all(nvec %% 1 == 0))
+  nvec <- as.integer(nvec)
 
   obj <- incrementaliter(nextFunc = function(i, nvec) NextCartes(i, nvec),
                          prevFunc = function(i, nvec) PrevCartes(i, nvec),

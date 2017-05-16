@@ -15,7 +15,7 @@ iperm(n, k = n)
 iterator object
 }
 \description{
-Create an iterator for all permutations of integers 1 through n.
+Create an iterator for all permutations of size k of integers 1 to n.
 }
 \examples{
 x <- iperm(3)

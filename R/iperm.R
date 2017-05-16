@@ -1,5 +1,5 @@
 #' Permutation Iterator
-#' @description Create an iterator for all permutations of integers 1 through n.
+#' @description Create an iterator for all permutations of size k of integers 1 to n.
 #' @param n positive integer
 #' @param k positive integer
 #' @return iterator object
@@ -22,6 +22,8 @@ iperm <- function(n, k = n)
   stopifnot(k > 0L)
   stopifnot((k %% 1) == 0)
   stopifnot(n >= k)
+  k <- as.integer(k)
+  n <- as.integer(n)
 
   obj <- incrementaliter(nextFunc = function(i, n, k) NextPerm(i, n),
                          prevFunc = function(i, n, k) PrevPerm(i, n),

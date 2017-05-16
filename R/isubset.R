@@ -17,6 +17,7 @@ isubset <- function(n)
   stopifnot(length(n) == 1L)
   stopifnot(n > 0L)
   stopifnot((n %% 1) == 0)
+  n <- as.integer(n)
 
   obj <- incrementaliter(nextFunc = function(i, n) NextSubset(i, n),
                          prevFunc = function(i, n) PrevSubset(i, n),
