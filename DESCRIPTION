@@ -5,10 +5,9 @@ Version: 1.0.1
 Authors@R: c(
   person("Kota", "Mori", email = "kmori05@gmail.com", role = c("aut", "cre"))
   )
-Maintainer: Kota Mori <kmori05@gmail.com>
-Description: Provides iterators for combinations, permutations, and subsets,
-    which allow one to go through all elements without creating a huge set of
-    all possible values.
+Description: Provides iterators for combinations, permutations, subsets, and
+    Cartesian product, which allow one to go through all elements without creating 
+    a huge set of all possible values.
 License: MIT + file LICENSE
 Depends:
     R (>= 3.1)
