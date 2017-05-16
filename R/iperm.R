@@ -18,6 +18,10 @@ iperm <- function(n, k = n)
   stopifnot(length(n) == 1L)
   stopifnot(n > 0L)
   stopifnot((n %% 1) == 0)
+  stopifnot(length(k) == 1L)
+  stopifnot(k > 0L)
+  stopifnot((k %% 1) == 0)
+  stopifnot(n >= k)
 
   obj <- incrementaliter(nextFunc = function(i, n, k) NextPerm(i, n),
                          prevFunc = function(i, n, k) PrevPerm(i, n),
