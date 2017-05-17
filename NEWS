@@ -1,3 +1,10 @@
+combiter v1.0.2 (Release date: 2017-05-17)
+===============
+
+* function name change `incrementaliter` --> `recursiveiter`
+
+
+
 combiter v1.0.1 (Release date: 2017-05-15)
 ===============
 
