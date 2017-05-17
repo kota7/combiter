@@ -2,12 +2,10 @@
 % Please edit documentation in R/s3generic.R
 \docType{import}
 \name{reexports}
-\alias{reexports}
+\alias{hasNext}
 \alias{nextElem}
 \alias{reexports}
-\alias{hasNext}
 \title{Objects exported from other packages}
-\keyword{internal}
 \description{
 These objects are imported from other packages. Follow the links
 below to see their documentation.
@@ -17,4 +15,5 @@ below to see their documentation.
 
   \item{itertools}{\code{\link[itertools]{hasNext}}}
 }}
+\keyword{internal}
 

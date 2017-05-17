@@ -26,11 +26,11 @@ iperm <- function(n, k = n)
   k <- as.integer(k)
   n <- as.integer(n)
 
-  obj <- incrementaliter(nextFunc = function(i, n, k) NextPerm(i, n),
-                         prevFunc = function(i, n, k) PrevPerm(i, n),
-                         firstFunc = function(n, k) 1:k,
-                         lastFunc = function(n, k) n:(n-k+1),
-                         n = n, k = k)
+  obj <- recursiveiter(nextFunc = function(i, n, k) NextPerm(i, n),
+                       prevFunc = function(i, n, k) PrevPerm(i, n),
+                       firstFunc = function(n, k) 1:k,
+                       lastFunc = function(n, k) n:(n-k+1),
+                       n = n, k = k)
   class(obj) <- c("iperm", class(obj))
   obj
 }
@@ -61,6 +61,6 @@ ipermv <- function(values, k = length(values))
   out <- list(nextElem=nextElem, prevElem=prevElem,
               hasNext=hasNext, hasPrev=hasPrev,
               getFirst=getFirst, getLast=getLast)
-  class(out) <- c("ipermv", "incrementaliter", "abstractiter", "iter")
+  class(out) <- c("ipermv", "recursiveiter", "abstractiter", "iter")
   out
 }

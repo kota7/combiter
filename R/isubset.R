@@ -19,11 +19,11 @@ isubset <- function(n)
   stopifnot((n %% 1) == 0)
   n <- as.integer(n)
 
-  obj <- incrementaliter(nextFunc = function(i, n) NextSubset(i, n),
-                         prevFunc = function(i, n) PrevSubset(i, n),
-                         firstFunc = function(n) integer(0),
-                         lastFunc = function(n) 1:n,
-                         n = n)
+  obj <- recursiveiter(nextFunc = function(i, n) NextSubset(i, n),
+                       prevFunc = function(i, n) PrevSubset(i, n),
+                       firstFunc = function(n) integer(0),
+                       lastFunc = function(n) 1:n,
+                       n = n)
   class(obj) <- c("isubset", class(obj))
   obj
 }
@@ -53,7 +53,7 @@ isubsetv <- function(values)
   out <- list(nextElem=nextElem, prevElem=prevElem,
               hasNext=hasNext, hasPrev=hasPrev,
               getFirst=getFirst, getLast=getLast)
-  class(out) <- c("isubsetv", "incrementaliter", "abstractiter", "iter")
+  class(out) <- c("isubsetv", "recursiveiter", "abstractiter", "iter")
   out
 }
 

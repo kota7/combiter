@@ -21,11 +21,11 @@ icartes <- function(nvec)
   stopifnot(all(nvec %% 1 == 0))
   nvec <- as.integer(nvec)
 
-  obj <- incrementaliter(nextFunc = function(i, nvec) NextCartes(i, nvec),
-                         prevFunc = function(i, nvec) PrevCartes(i, nvec),
-                         firstFunc = function(nvec) rep(1L, length(nvec)),
-                         lastFunc = function(nvec) nvec,
-                         nvec = nvec)
+  obj <- recursiveiter(nextFunc = function(i, nvec) NextCartes(i, nvec),
+                       prevFunc = function(i, nvec) PrevCartes(i, nvec),
+                       firstFunc = function(nvec) rep(1L, length(nvec)),
+                       lastFunc = function(nvec) nvec,
+                       nvec = nvec)
   class(obj) <- c("icartes", class(obj))
   obj
 }
@@ -60,6 +60,6 @@ icartesv <- function(...)
   out <- list(nextElem=nextElem, prevElem=prevElem,
               hasNext=hasNext, hasPrev=hasPrev,
               getFirst=getFirst, getLast=getLast)
-  class(out) <- c("isubsetv", "incrementaliter", "abstractiter", "iter")
+  class(out) <- c("isubsetv", "recursiveiter", "abstractiter", "iter")
   out
 }

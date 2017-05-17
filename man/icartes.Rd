@@ -41,3 +41,4 @@ x <- icartesv(Month=c("Jan", "Feb", "Mar"),
               By=c("car", "plane", "bus"))
 as.list(x)
 }
+

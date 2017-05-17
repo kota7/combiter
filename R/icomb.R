@@ -27,11 +27,11 @@ icomb <- function(n, k)
   k <- as.integer(k)
 
 
-  obj <- incrementaliter(nextFunc = function(i,n,k) NextComb(i, n),
-                         prevFunc = function(i,n,k) PrevComb(i, n),
-                         firstFunc = function(n,k) 1:k,
-                         lastFunc = function(n,k) (n-k+1):n,
-                         n = n, k = k)
+  obj <- recursiveiter(nextFunc = function(i,n,k) NextComb(i, n),
+                       prevFunc = function(i,n,k) PrevComb(i, n),
+                       firstFunc = function(n,k) 1:k,
+                       lastFunc = function(n,k) (n-k+1):n,
+                       n = n, k = k)
   class(obj) <- c("icomb", class(obj))
   obj
 }
@@ -62,6 +62,6 @@ icombv <- function(values, k)
   out <- list(nextElem=nextElem, prevElem=prevElem,
               hasNext=hasNext, hasPrev=hasPrev,
               getFirst=getFirst, getLast=getLast)
-  class(out) <- c("icombv", "incrementaliter", "abstractiter", "iter")
+  class(out) <- c("icombv", "recursiveiter", "abstractiter", "iter")
   out
 }

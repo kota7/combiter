@@ -41,3 +41,4 @@ while (hasNext(x))
 
 as.list(ipermv(c("R", "G", "B")))
 }
+

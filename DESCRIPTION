@@ -6,8 +6,8 @@ Authors@R: c(
   person("Kota", "Mori", email = "kmori05@gmail.com", role = c("aut", "cre"))
   )
 Description: Provides iterators for combinations, permutations, subsets, and
-    Cartesian product, which allow one to go through all elements without creating 
-    a huge set of all possible values.
+    Cartesian product, which allow one to go through all elements without creating a
+    huge set of all possible values.
 License: MIT + file LICENSE
 Depends:
     R (>= 3.1)
@@ -17,7 +17,7 @@ Imports:
     iterators,
     itertools,
     Rcpp
-RoxygenNote: 6.0.1
+RoxygenNote: 5.0.1
 Suggests:
     combinat,
     fastmatch,
