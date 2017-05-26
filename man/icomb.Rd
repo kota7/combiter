@@ -40,4 +40,3 @@ while (hasNext(x))
 
 as.list(icombv(c("A", "G", "C"), 2))
 }
-

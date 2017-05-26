@@ -1,14 +1,14 @@
 combiter: Combinatorics Iterators for R
 ================
 
-[![Build Status](https://travis-ci.org/kota7/combiter.svg?branch=master)](https://travis-ci.org/kota7/combiter) [![CRAN Status](http://www.r-pkg.org/badges/version/combiter)](http://www.r-pkg.org/badges/version/combiter) [![](http://cranlogs.r-pkg.org/badges/combiter)](http://cran.rstudio.com/web/packages/combiter/index.html)
+[![Build Status](https://travis-ci.org/kota7/combiter.svg?branch=master)](https://travis-ci.org/kota7/combiter) [![CRAN Status](https://www.r-pkg.org/badges/version/combiter)](https://www.r-pkg.org/badges/version/combiter) [![](https://cranlogs.r-pkg.org/badges/combiter)](https://cran.rstudio.com/web/packages/combiter/index.html)
 
 Overview
 --------
 
 This package provides iterators for combinations, permutations, subsets, and cartesian product, with which one can go through the elements without creating a huge set of all possible values.
 
-Since `v1.0.2`, the iterator objects of the package inherit the `iter` class from [iterators](https://cran.r-project.org/web/packages/iterators/index.html) package. As a result, the objects are also compatible with [foreach](https://cran.r-project.org/web/packages/foreach/index.html) library.
+Since `v1.0.2`, the iterator objects of the package inherit the `iter` class from [iterators](https://cran.r-project.org/package=iterators) package. As a result, the objects are also compatible with [foreach](https://cran.r-project.org/package=foreach) library.
 
 Installation and Import
 -----------------------

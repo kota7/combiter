@@ -41,4 +41,3 @@ fibiter <- recursiveiter(
   prevFunc = NULL, firstFunc = function() 0, lastFunc = function() Inf)
 for (k in 1:20) cat(nextElem(fibiter)[1], "")
 }
-
