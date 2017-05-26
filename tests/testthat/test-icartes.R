@@ -2,7 +2,7 @@ library(testthat)
 library(combiter)
 library(fastmatch)
 
-context("cartesean product iterator")
+context("cartesian product iterator")
 
 test_that("icartes goes through product of maxes", {
 
@@ -35,7 +35,7 @@ test_that("icartes goes through product of maxes", {
 })
 
 
-test_that("icartes covers all cartesean product", {
+test_that("icartes covers all cartesian product", {
 
   for (n1 in 1:3) {
     for (n2 in 1:3) {
