@@ -1,7 +1,7 @@
 combiter: Combinatorics Iterators for R
 ================
 
-[![Build Status](https://travis-ci.org/kota7/combiter.svg?branch=master)](https://travis-ci.org/kota7/combiter) [![CRAN Status](https://www.r-pkg.org/badges/version/combiter)](https://www.r-pkg.org/badges/version/combiter) [![](https://cranlogs.r-pkg.org/badges/combiter)](https://cran.rstudio.com/web/packages/combiter/index.html)
+[![Build Status](https://travis-ci.org/kota7/combiter.svg?branch=master)](https://travis-ci.org/kota7/combiter) [![CRAN Status](https://www.r-pkg.org/badges/version/combiter)](https://www.r-pkg.org/badges/version/combiter) [![](https://cranlogs.r-pkg.org/badges/combiter)](https://cran.r-project.org/package=combiter)
 
 Overview
 --------
