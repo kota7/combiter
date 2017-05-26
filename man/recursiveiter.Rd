@@ -30,7 +30,8 @@ The "first" and "last" functions must take the additional parameters and
 return the initial and last state variables respectively.
 
 The created object is an iterator of class \code{recursiveiter}, which inherits
-\code{abstractiter} and \code{iter}.  It can be used with \code{\link[foreach]{foreach}} and accepts \code{\link{as.list}} conversion.
+\code{abstractiter} and \code{iter}.
+It can be used with \code{\link[foreach]{foreach}} and accepts \code{\link{as.list}} conversion.
 }
 \examples{
 fibiter <- recursiveiter(
