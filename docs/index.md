@@ -39,7 +39,7 @@ This package provides four iterator classes for integer vectors: `icomb`, `iperm
 -   `icomb(n, k)` goes through all combinations of k integers out of `1` to `n`.
 -   `iperm(n, k)` goes through all permutations of size `k` consisting of integers `1` to `n` of size `k`.
 -   `isubset(n)` goes through all subsets of integers `1` to `n`.
--   `icartes(c(n1, n2, ...))` goes through cartesian products of `1` to `n1`, `1` to `n2` ... (`v1.0.2+`).
+-   `icartes(c(n1, n2, ...))`, available for `v1.0.2+`, goes through cartesian products of `1` to `n1`, `1` to `n2` ....
 
 The iterators do not store all possible values inside the object. Instead, they compute the next or previous element on spot. This implementation would be more memory efficient with a large `n`, since the number of possible cases grows exponentially or even faster for these Combinatorics operations.
 
@@ -160,14 +160,14 @@ while (hasNext(x))
 
 `icombv`, `isubsetv`, and `icartesv` are also defined analogously.
 
-Use with `foreach`
-------------------
+Use with `foreach` (v1.0.2+)
+----------------------------
 
 Since `v1.0.2`, the iterator objects can be used with `foreach` function from [foreach](https://cran.r-project.org/web/packages/foreach/index.html).
 
 ``` r
 library(foreach)
-foreach(i = icomb(3,2)) %do% sum(i)
+foreach(i = icomb(3, 2)) %do% sum(i)
 ```
 
     ## [[1]]
