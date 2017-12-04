@@ -37,7 +37,7 @@ test_that("all results of isubset are subsets of 1:n", {
     while (hasNext(x))
     {
       i <- nextElem(x)
-      expect_true(all(i %in% 1:n))
+      expect_true(all(i %in% 1:n), paste0(i, collase=","))
       #expect_false(is.na(match(list(i), allSS)),
       #             paste(paste0(i, collapse=" "),
       #                   allSS_str, sep =" v "))
@@ -48,7 +48,7 @@ test_that("all results of isubset are subsets of 1:n", {
     while (hasPrev(x))
     {
       i <- prevElem(x)
-      expect_true(all(i %in% 1:n))
+      expect_true(all(i %in% 1:n), paste0(i, collase=","))
 
       #expect_false(is.na(match(list(i), allSS)),
       #             paste(paste0(i, collapse=" "),
