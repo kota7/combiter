@@ -34,6 +34,7 @@ Since `v1.0.2`, the iterator objects of the package inherit the `iter` class fro
 As a result, the objects are also compatible with [foreach](https://cran.r-project.org/package=foreach) library.
 
 
+
 ## Installation and import
 
 Install from CRAN by:
