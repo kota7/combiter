@@ -76,7 +76,9 @@ test_that("icomb elements are ordered lexicographically", {
         j <- nextElem(x)
         # requires i < j, but check only when i is not NULL
         if (!is.null(i)) {
-          expect_true(lexico_smaller(i, j))
+          expect_true(lexico_smaller(i, j),
+                      paste(paste0(i, collapse=" "),
+                            paste0(j, collase=" "), "?<"))
         }
         i <- j
       }
@@ -89,7 +91,9 @@ test_that("icomb elements are ordered lexicographically", {
         j <- prevElem(x)
         # requires j < i
         if (!is.null(i)) {
-          expect_true(lexico_smaller(j, i))
+          expect_true(lexico_smaller(j, i),
+                      paste(paste0(j, collapse=" "),
+                            paste0(i, collase=" "), "?<"))
         }
         i <- j
       }

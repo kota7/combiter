@@ -27,7 +27,7 @@ test_that("isubset goes through 2^n values", {
 })
 
 
-test_that("isubset covers all permutations", {
+test_that("isubset covers all subsets", {
   for (n in 1:5)
   {
     x <- isubset(n)
@@ -36,7 +36,8 @@ test_that("isubset covers all permutations", {
     while (hasNext(x))
     {
       i <- nextElem(x)
-      expect_false(is.na(match(list(i), allSS)))
+      expect_false(is.na(match(list(i), allSS)),
+                   paste0(i, collapse=" "))
     }
 
     # do the same for backward
@@ -44,7 +45,8 @@ test_that("isubset covers all permutations", {
     while (hasPrev(x))
     {
       i <- prevElem(x)
-      expect_false(is.na(match(list(i), allSS)))
+      expect_false(is.na(match(list(i), allSS)),
+                   paste0(i, collapse=" "))
     }
   }
 })
