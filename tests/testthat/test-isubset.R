@@ -31,16 +31,10 @@ test_that("all results of isubset are subsets of 1:n", {
   for (n in 1:5)
   {
     x <- isubset(n)
-    #allSS <- apply(do.call("expand.grid", rep(list(c(FALSE, TRUE)), n)),
-    #               1, which)
-    #allSS_str <- paste0(sapply(allSS, paste0, collapse=" "), collapse="/")
     while (hasNext(x))
     {
       i <- nextElem(x)
       expect_true(all(i %in% 1:n), paste0(i, collase=","))
-      #expect_false(is.na(match(list(i), allSS)),
-      #             paste(paste0(i, collapse=" "),
-      #                   allSS_str, sep =" v "))
     }
 
     # do the same for backward
@@ -49,10 +43,6 @@ test_that("all results of isubset are subsets of 1:n", {
     {
       i <- prevElem(x)
       expect_true(all(i %in% 1:n), paste0(i, collase=","))
-
-      #expect_false(is.na(match(list(i), allSS)),
-      #             paste(paste0(i, collapse=" "),
-      #                   allSS_str, sep =" v "))
     }
   }
 })
