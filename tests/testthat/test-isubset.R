@@ -31,7 +31,7 @@ test_that("isubset covers all subsets", {
   for (n in 1:5)
   {
     x <- isubset(n)
-    allSS <- apply(do.call(expand.grid, rep(list(c(FALSE, TRUE)), n)),
+    allSS <- apply(do.call("expand.grid", rep(list(c(FALSE, TRUE)), n)),
                    1, which)
     while (hasNext(x))
     {
