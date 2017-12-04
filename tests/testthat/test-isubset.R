@@ -33,7 +33,7 @@ test_that("isubset covers all subsets", {
     x <- isubset(n)
     allSS <- apply(do.call("expand.grid", rep(list(c(FALSE, TRUE)), n)),
                    1, which)
-    allSS_str <- paste0(sapply(allSS, paste0, collapse=","), collapse=" ")
+    allSS_str <- paste0(sapply(allSS, paste0, collapse=" "), collapse="/")
     while (hasNext(x))
     {
       i <- nextElem(x)
