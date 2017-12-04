@@ -1,6 +1,5 @@
 library(testthat)
 library(combiter)
-library(fastmatch)
 context("combination iterator")
 
 test_that("icomb goes through n C k values", {
@@ -41,7 +40,7 @@ test_that("icomb covers all combinations", {
       while (hasNext(x))
       {
         i <- nextElem(x)
-        expect_false(is.na(fmatch(list(i), allCombs)))
+        expect_false(is.na(match(list(i), allCombs)))
       }
 
       # do the same for backward
@@ -49,7 +48,7 @@ test_that("icomb covers all combinations", {
       while (hasPrev(x))
       {
         i <- prevElem(x)
-        expect_false(is.na(fmatch(list(i), allCombs)))
+        expect_false(is.na(match(list(i), allCombs)))
       }
     }
   }

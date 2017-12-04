@@ -1,6 +1,5 @@
 library(testthat)
 library(combiter)
-library(fastmatch)
 context("permutation iterator")
 
 test_that("iperm goes through n P k values", {
@@ -43,7 +42,7 @@ test_that("iperm covers all permutations", {
       while (hasNext(x))
       {
         i <- nextElem(x)
-        expect_false(is.na(fmatch(list(i), allPerms)))
+        expect_false(is.na(match(list(i), allPerms)))
       }
 
       # do the same for backward
@@ -51,7 +50,7 @@ test_that("iperm covers all permutations", {
       while (hasPrev(x))
       {
         i <- prevElem(x)
-        expect_false(is.na(fmatch(list(i), allPerms)))
+        expect_false(is.na(match(list(i), allPerms)))
       }
     }
   }

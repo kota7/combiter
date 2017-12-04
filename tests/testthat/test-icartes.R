@@ -1,6 +1,5 @@
 library(testthat)
 library(combiter)
-library(fastmatch)
 
 context("cartesian product iterator")
 
@@ -49,7 +48,7 @@ test_that("icartes covers all cartesian product", {
         while (hasNext(x))
         {
           i <- nextElem(x)
-          expect_false(is.na(fmatch(list(i), all_elems)))
+          expect_false(is.na(match(list(i), all_elems)))
         }
 
       }
