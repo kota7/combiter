@@ -2,34 +2,34 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 NextCartes <- function(x, nvec) {
-    .Call('combiter_NextCartes', PACKAGE = 'combiter', x, nvec)
+    .Call('_combiter_NextCartes', PACKAGE = 'combiter', x, nvec)
 }
 
 PrevCartes <- function(x, nvec) {
-    .Call('combiter_PrevCartes', PACKAGE = 'combiter', x, nvec)
+    .Call('_combiter_PrevCartes', PACKAGE = 'combiter', x, nvec)
 }
 
 NextComb <- function(x, n) {
-    .Call('combiter_NextComb', PACKAGE = 'combiter', x, n)
+    .Call('_combiter_NextComb', PACKAGE = 'combiter', x, n)
 }
 
 PrevComb <- function(x, n) {
-    .Call('combiter_PrevComb', PACKAGE = 'combiter', x, n)
+    .Call('_combiter_PrevComb', PACKAGE = 'combiter', x, n)
 }
 
 NextPerm <- function(x, n) {
-    .Call('combiter_NextPerm', PACKAGE = 'combiter', x, n)
+    .Call('_combiter_NextPerm', PACKAGE = 'combiter', x, n)
 }
 
 PrevPerm <- function(x, n) {
-    .Call('combiter_PrevPerm', PACKAGE = 'combiter', x, n)
+    .Call('_combiter_PrevPerm', PACKAGE = 'combiter', x, n)
 }
 
 NextSubset <- function(x, n) {
-    .Call('combiter_NextSubset', PACKAGE = 'combiter', x, n)
+    .Call('_combiter_NextSubset', PACKAGE = 'combiter', x, n)
 }
 
 PrevSubset <- function(x, n) {
-    .Call('combiter_PrevSubset', PACKAGE = 'combiter', x, n)
+    .Call('_combiter_PrevSubset', PACKAGE = 'combiter', x, n)
 }
 
