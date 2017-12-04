@@ -33,11 +33,13 @@ test_that("isubset covers all subsets", {
     x <- isubset(n)
     allSS <- apply(do.call("expand.grid", rep(list(c(FALSE, TRUE)), n)),
                    1, which)
+    allSS_str <- paste0(sapply(allSS, paste0, collapse=","), collase=" ")
     while (hasNext(x))
     {
       i <- nextElem(x)
       expect_false(is.na(match(list(i), allSS)),
-                   paste0(i, collapse=" "))
+                   paste(paste0(i, collapse=" "),
+                         allSS_str, sep =" v "))
     }
 
     # do the same for backward
@@ -46,7 +48,8 @@ test_that("isubset covers all subsets", {
     {
       i <- prevElem(x)
       expect_false(is.na(match(list(i), allSS)),
-                   paste0(i, collapse=" "))
+                   paste(paste0(i, collapse=" "),
+                         allSS_str, sep =" v "))
     }
   }
 })
