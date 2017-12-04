@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // NextCartes
 std::vector<int> NextCartes(std::vector<int> x, std::vector<int> nvec);
-RcppExport SEXP combiter_NextCartes(SEXP xSEXP, SEXP nvecSEXP) {
+RcppExport SEXP _combiter_NextCartes(SEXP xSEXP, SEXP nvecSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -19,7 +19,7 @@ END_RCPP
 }
 // PrevCartes
 std::vector<int> PrevCartes(std::vector<int> x, std::vector<int> nvec);
-RcppExport SEXP combiter_PrevCartes(SEXP xSEXP, SEXP nvecSEXP) {
+RcppExport SEXP _combiter_PrevCartes(SEXP xSEXP, SEXP nvecSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -31,7 +31,7 @@ END_RCPP
 }
 // NextComb
 std::vector<int> NextComb(std::vector<int> x, int n);
-RcppExport SEXP combiter_NextComb(SEXP xSEXP, SEXP nSEXP) {
+RcppExport SEXP _combiter_NextComb(SEXP xSEXP, SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -43,7 +43,7 @@ END_RCPP
 }
 // PrevComb
 std::vector<int> PrevComb(std::vector<int> x, int n);
-RcppExport SEXP combiter_PrevComb(SEXP xSEXP, SEXP nSEXP) {
+RcppExport SEXP _combiter_PrevComb(SEXP xSEXP, SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -55,7 +55,7 @@ END_RCPP
 }
 // NextPerm
 std::vector<int> NextPerm(std::vector<int> x, int n);
-RcppExport SEXP combiter_NextPerm(SEXP xSEXP, SEXP nSEXP) {
+RcppExport SEXP _combiter_NextPerm(SEXP xSEXP, SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -67,7 +67,7 @@ END_RCPP
 }
 // PrevPerm
 std::vector<int> PrevPerm(std::vector<int> x, int n);
-RcppExport SEXP combiter_PrevPerm(SEXP xSEXP, SEXP nSEXP) {
+RcppExport SEXP _combiter_PrevPerm(SEXP xSEXP, SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -79,7 +79,7 @@ END_RCPP
 }
 // NextSubset
 std::vector<int> NextSubset(std::vector<int> x, int n);
-RcppExport SEXP combiter_NextSubset(SEXP xSEXP, SEXP nSEXP) {
+RcppExport SEXP _combiter_NextSubset(SEXP xSEXP, SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -91,7 +91,7 @@ END_RCPP
 }
 // PrevSubset
 std::vector<int> PrevSubset(std::vector<int> x, int n);
-RcppExport SEXP combiter_PrevSubset(SEXP xSEXP, SEXP nSEXP) {
+RcppExport SEXP _combiter_PrevSubset(SEXP xSEXP, SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -100,4 +100,21 @@ BEGIN_RCPP
     rcpp_result_gen = Rcpp::wrap(PrevSubset(x, n));
     return rcpp_result_gen;
 END_RCPP
+}
+
+static const R_CallMethodDef CallEntries[] = {
+    {"_combiter_NextCartes", (DL_FUNC) &_combiter_NextCartes, 2},
+    {"_combiter_PrevCartes", (DL_FUNC) &_combiter_PrevCartes, 2},
+    {"_combiter_NextComb", (DL_FUNC) &_combiter_NextComb, 2},
+    {"_combiter_PrevComb", (DL_FUNC) &_combiter_PrevComb, 2},
+    {"_combiter_NextPerm", (DL_FUNC) &_combiter_NextPerm, 2},
+    {"_combiter_PrevPerm", (DL_FUNC) &_combiter_PrevPerm, 2},
+    {"_combiter_NextSubset", (DL_FUNC) &_combiter_NextSubset, 2},
+    {"_combiter_PrevSubset", (DL_FUNC) &_combiter_PrevSubset, 2},
+    {NULL, NULL, 0}
+};
+
+RcppExport void R_init_combiter(DllInfo *dll) {
+    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
+    R_useDynamicSymbols(dll, FALSE);
 }

@@ -1,6 +1,5 @@
 library(testthat)
 library(combiter)
-library(fastmatch)
 
 context("cartesian product iterator")
 
@@ -49,7 +48,8 @@ test_that("icartes covers all cartesian product", {
         while (hasNext(x))
         {
           i <- nextElem(x)
-          expect_false(is.na(fmatch(list(i), all_elems)))
+          expect_false(is.na(match(list(i), all_elems)),
+                       paste0(i, collapse=" "))
         }
 
       }
@@ -78,7 +78,9 @@ test_that("icartes elements are ordered lexicographically", {
         while (hasNext(x))
         {
           j <- nextElem(x)
-          if (!is.null(i)) expect_true(lexico_smaller(i, j))
+          if (!is.null(i)) expect_true(lexico_smaller(i, j),
+                                       paste(paste0(i, collapse=" "),
+                                             paste0(j, collase=" "), "?<"))
           i <- j
         }
 
@@ -88,7 +90,9 @@ test_that("icartes elements are ordered lexicographically", {
         while (hasPrev(x))
         {
           j <- prevElem(x)
-          if (!is.null(i)) expect_true(lexico_smaller(j, i))
+          if (!is.null(i)) expect_true(lexico_smaller(j, i),
+                                       paste(paste0(j, collapse=" "),
+                                             paste0(i, collase=" "), "?<"))
           i <- j
         }
       }

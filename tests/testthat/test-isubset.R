@@ -1,6 +1,5 @@
 library(testthat)
 library(combiter)
-library(fastmatch)
 context("subset iterator")
 
 test_that("isubset goes through 2^n values", {
@@ -28,16 +27,14 @@ test_that("isubset goes through 2^n values", {
 })
 
 
-test_that("isubset covers all permutations", {
+test_that("all results of isubset are subsets of 1:n", {
   for (n in 1:5)
   {
     x <- isubset(n)
-    allSS <- apply(do.call(expand.grid, rep(list(c(FALSE, TRUE)), n)),
-                   1, which)
     while (hasNext(x))
     {
       i <- nextElem(x)
-      expect_false(is.na(fmatch(list(i), allSS)))
+      expect_true(all(i %in% 1:n), paste0(i, collase=","))
     }
 
     # do the same for backward
@@ -45,7 +42,7 @@ test_that("isubset covers all permutations", {
     while (hasPrev(x))
     {
       i <- prevElem(x)
-      expect_false(is.na(fmatch(list(i), allSS)))
+      expect_true(all(i %in% 1:n), paste0(i, collase=","))
     }
   }
 })

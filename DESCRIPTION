@@ -1,7 +1,7 @@
 Package: combiter
 Type: Package
 Title: Combinatorics Iterators
-Version: 1.0.2
+Version: 1.0.3
 Authors@R: c(
   person("Kota", "Mori", email = "kmori05@gmail.com", role = c("aut", "cre"))
   )
@@ -20,7 +20,6 @@ Imports:
 RoxygenNote: 6.0.1
 Suggests:
     combinat,
-    fastmatch,
     foreach,
     testthat
 URL: https://github.com/kota7/combiter

@@ -1,6 +1,5 @@
 library(testthat)
 library(combiter)
-library(fastmatch)
 context("combination iterator")
 
 test_that("icomb goes through n C k values", {
@@ -41,7 +40,7 @@ test_that("icomb covers all combinations", {
       while (hasNext(x))
       {
         i <- nextElem(x)
-        expect_false(is.na(fmatch(list(i), allCombs)))
+        expect_false(is.na(match(list(i), allCombs)))
       }
 
       # do the same for backward
@@ -49,7 +48,7 @@ test_that("icomb covers all combinations", {
       while (hasPrev(x))
       {
         i <- prevElem(x)
-        expect_false(is.na(fmatch(list(i), allCombs)))
+        expect_false(is.na(match(list(i), allCombs)))
       }
     }
   }
@@ -77,7 +76,9 @@ test_that("icomb elements are ordered lexicographically", {
         j <- nextElem(x)
         # requires i < j, but check only when i is not NULL
         if (!is.null(i)) {
-          expect_true(lexico_smaller(i, j))
+          expect_true(lexico_smaller(i, j),
+                      paste(paste0(i, collapse=" "),
+                            paste0(j, collase=" "), "?<"))
         }
         i <- j
       }
@@ -90,7 +91,9 @@ test_that("icomb elements are ordered lexicographically", {
         j <- prevElem(x)
         # requires j < i
         if (!is.null(i)) {
-          expect_true(lexico_smaller(j, i))
+          expect_true(lexico_smaller(j, i),
+                      paste(paste0(j, collapse=" "),
+                            paste0(i, collase=" "), "?<"))
         }
         i <- j
       }

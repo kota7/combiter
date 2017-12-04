@@ -1,6 +1,5 @@
 library(testthat)
 library(combiter)
-library(fastmatch)
 library(foreach)
 
 context("use with foreach")

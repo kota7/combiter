@@ -1,6 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![Build Status](https://travis-ci.org/kota7/combiter.svg?branch=master)](https://travis-ci.org/kota7/combiter) [![CRAN Status](https://www.r-pkg.org/badges/version/combiter)](https://www.r-pkg.org/badges/version/combiter) [![](https://cranlogs.r-pkg.org/badges/combiter)](https://cran.r-project.org/package=combiter)
+[![Build Status](https://travis-ci.org/kota7/combiter.svg?branch=master)](https://travis-ci.org/kota7/combiter) [![CRAN Status](https://www.r-pkg.org/badges/version/combiter)](https://www.r-pkg.org/badges/version/combiter) [![](https://cranlogs.r-pkg.org/badges/combiter)](https://cran.r-project.org/package=combiter) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/kota7/combiter?branch=master&svg=true)](https://ci.appveyor.com/project/kota7/combiter)
 
 combiter: Combinatorics Iterators for R
 =======================================
