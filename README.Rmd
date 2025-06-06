@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 [![](https://cranlogs.r-pkg.org/badges/combiter)](https://cran.r-project.org/package=combiter
 )
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/kota7/combiter?branch=master&svg=true)](https://ci.appveyor.com/project/kota7/combiter)
-
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/kota7/combiter)
 
 # combiter: Combinatorics Iterators for R
 
